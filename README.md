@@ -3,15 +3,15 @@ Based on Alpine with 25MB
 
 NOTE: Example assumes you have a "/squid" with your container specific data!
 Change as needed with the SRC data that you are mounting into the container.
-Example named data is defined in the example subdir.
 
-## Required "DATA" directory - named.conf and zone data:
+
+## Required "DATA" directory:
 This container assumes you have a "/squid" folder with your container specific data:
 You can change that folder as needed, but make sure you update the "-v" mounts for run time
 
-1.) [ *REQUIRED* ] In your /squid/etc/bind a file "named.conf", which acts as an entry point to your configs
+1.) [ *REQUIRED* ] In your /squid/etc/squid a file "squid.conf", which acts as an entry point to your configs
 
-2.) [ *REQUIRED* ] A "/squid/var/cache/bind" directory for all of the master or slave zones. If it's for slave zones, it will populate automatically and you can leave it blank.
+2.) [ *REQUIRED* ] A "/squid/var/cache/squid" directory for all of the master or slave zones. If it's for slave zones, it will populate automatically and you can leave it blank.
 
 3.) [ *OPTIONAL* ] A "/var/log/squid" directory for logs if syslog logging is not enabled
 
