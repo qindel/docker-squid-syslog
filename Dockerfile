@@ -8,6 +8,7 @@ ENV TCPLOGHOST=
 
 RUN apk --update add squid
 RUN apk --update add rsyslog
+RUN apk --update add curl
 
 RUN mkdir -m 0755 -p /var/spool/rsyslog &&  addgroup syslog && adduser -D -s /sbin/nologin -h /var/spool/rsyslog -G syslog syslog && chown -R syslog:syslog /var/spool/rsyslog 
 
